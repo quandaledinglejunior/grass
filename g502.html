@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptionsp.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images\logo.png" alt="Logo" />
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html">Consoles</a></li>
+            <li><a href="ph.html" class="active">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Product Overview -->
+      <section class="product-overview">
+        <div class="product-image">
+          <img
+            src="pimages\mouse.webp"
+            alt="G502 HERO High Performance Gaming Mouse"
+          />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>G502 HERO Gaming Mouse</li>
+            <li>Optional 5x 3.6 g weights and Case</li>
+            <li>User documentation</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <div class="feature">
+          <h3>A REBORN HERO</h3>
+          <p>
+            G502 HERO features an advanced optical sensor for maximum tracking
+            accuracy, customizable RGB lighting, custom game profiles, from 100
+            up to 25,600 DPI, and repositionable weights.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>HERO 25K SENSOR</h3>
+          <p>
+            HERO 25K is our most accurate gaming sensor ever with next-gen
+            precision and a ground-up architecture. With the fastest frame rate
+            processing yet, HERO is capable of 400+ IPS across the 100 – 25,600
+            DPI range with zero smoothing, filtering or acceleration. HERO 25K
+            achieves competition-level precision and the most consistent
+            responsiveness ever. Be sure to customize and tune your DPI settings
+            using Logitech G HUB.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>11 PROGRAMMABLE BUTTONS</h3>
+          <p>
+            Use Logitech G HUB to program your favorite commands and macros to
+            each of the 11 buttons. Build, crouch, melee, heal … put your power
+            moves at your fingertips. Save ready-to-play profiles directly to
+            the mouse to take your settings with you anywhere.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>TUNABLE WEIGHT</h3>
+          <p>
+            Fine tune mouse feel and glide to your advantage. Five 3.6g weights
+            come with G502 HERO and are configurable in a variety of front,
+            rear, left, right and center weighted configurations. Experiment
+            with the alignment and balance to find the sweet spot to optimize
+            your gaming performance.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>LIGHTSYNC RGB</h3>
+          <p>
+            LIGHTSYNC technology is next generation RGB that can be driven by
+            games, audio, or your screen to deliver the most immersive RGB
+            experience ever. Select from a full spectrum of approximately 16.8
+            million colors and synchronize lighting animations and effects with
+            your other Logitech G devices. Customize it all quickly and easily
+            using Logitech G HUB.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>GAME READY DETAILS</h3>
+          <p>
+            In addition to the core performance and personalization features,
+            many details were thoughtfully engineered and designed. Look for
+            primary buttons with mechanical switches, rubberized side grips,
+            magnetic weight-cavity door, and more.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>G502 HERO High Performance Gaming Mouse Specifications</h2>
+        <div class="specifications">
+          <div>
+            <h3>General</h3>
+            <p>
+              <strong>Dimensions:</strong> Height: 5.20 in (132 mm), Width: 2.95
+              in (75 mm), Depth: 1.57 in (40 mm)
+            </p>
+            <p><strong>Weight:</strong> 4.27 oz (121 g), mouse only</p>
+            <p>
+              <strong>Optional Extra Weights:</strong> up to 18 g (0.18 x 0.13
+              oz) (5x 3.6 g)
+            </p>
+            <p><strong>Cable Length:</strong> 6.89 ft (2.1 m)</p>
+          </div>
+
+          <!-- Technical Specifications -->
+          <div>
+            <h3>Technical Specifications</h3>
+
+            <!-- Tracking -->
+            <h4>Tracking</h4>
+            <p><strong>Sensor:</strong> HERO™</p>
+            <p><strong>Resolution:</strong> 100 – 25,600 DPI</p>
+            <p><strong>Zero Smoothing/Acceleration/Filtering</strong></p>
+            <p><strong>Max. Acceleration:</strong> >1.41 oz (40 g)</p>
+            <p><strong>Max. Speed:</strong> >400 IPS</p>
+
+            <!-- Responsiveness -->
+            <h4>Responsiveness</h4>
+            <p><strong>USB Data Format:</strong> 16 bits/axis</p>
+            <p><strong>USB Report Rate:</strong> 1000Hz (1ms)</p>
+            <p><strong>Microprocessor:</strong> 32-bit ARM</p>
+
+            <!-- Durability -->
+            <h4>Durability</h4>
+            <p><strong>PTFE Feet:</strong> >250 kilometers</p>
+
+            <!-- Other Features -->
+            <h4>Other Features</h4>
+            <p>
+              <strong>Onboard Memory:</strong> Up to 5 profiles (requires
+              firmware 127.1.7)
+            </p>
+            <p><strong>LIGHTSYNC RGB:</strong> 1 zone</p>
+          </div>
+
+          <!-- System Requirements -->
+          <div>
+            <h3>System Requirements</h3>
+            <p>
+              <strong>Operating Systems:</strong> Windows® 7 or later, macOS®
+              10.11 or later, ChromeOS™
+            </p>
+            <p><strong>Ports:</strong> USB port</p>
+            <p>
+              <strong>Internet:</strong> (Optional) Internet access for Logitech
+              G HUB
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

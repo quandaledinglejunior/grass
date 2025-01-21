@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptions.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html" class="active">Consoles</a></li>
+            <li><a href="ph.html">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-overview">
+        <div class="product-image">
+          <img
+            src="cimages\portal.webp"
+            alt="PlayStation Portal Remote Player"
+          />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>PlayStation Portal Remote Player</li>
+            <li>DualSense Wireless Controller</li>
+            <li>USB-C Charging Cable</li>
+            <li>Quick Start Guide</li>
+            <li>Warranty Card</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <!-- Features -->
+        <div class="feature">
+          <h3>Put Your PS5 in the Palm of Your Hand</h3>
+          <p>
+            PlayStation Portal Remote Player gives you access to the games on
+            your PS5 over your home Wi-Fi, letting you jump right into gaming
+            without needing to play on a TV.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Play Your Game Collection</h3>
+          <p>
+            PlayStation Portal Remote Player can play compatible games you have
+            installed on your PS5 console, including your favorite games for PS5
+            and PS4.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>
+            Experience Breathtaking Immersion with DualSense Wireless Controller
+            Features
+          </h3>
+          <p>
+            Feel the incredible immersion of haptic feedback and adaptive
+            triggers in supported games. Responsive vibrations react to your
+            in-game choices and simulate environmental factors. Dynamic
+            resistance mimics the tension of interactions with in-game gear and
+            objects in select PS5 games.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Beautiful 8” LCD Screen</h3>
+          <p>
+            Take in every exquisite detail of your favorite games as they come
+            alive on a brightly lit and gorgeous full HD screen.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>60fps Capable at 1080p Resolution</h3>
+          <p>
+            PlayStation Portal Remote Player can deliver silky smooth gameplay
+            at up to 60fps with high image clarity on its 1080p resolution
+            screen.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>
+            PlayStation Portal™ Remote Player and PULSE Explore™ Wireless
+            Earbuds Sold Separately
+          </h3>
+          <p>
+            Enhance your gaming experience with additional accessories designed
+            for seamless integration with your PlayStation ecosystem.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Get Gaming Fast</h3>
+          <p>
+            PlayStation Portal™ Remote Player is a purpose-built device
+            dedicated to delivering an incredible remote play experience. That
+            means you can turn it on, press a button to connect to your PS5
+            console and get right to playing.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>PlayStation Portal Remote Player Specifications</h2>
+        <div class="specifications">
+          <!-- General Specifications -->
+          <div>
+            <h3>General</h3>
+            <p><strong>Brand:</strong> PlayStation</p>
+            <p><strong>Model:</strong> Portal Remote Player</p>
+            <p><strong>Warranty:</strong> 1 Year</p>
+          </div>
+
+          <!-- Display -->
+          <div>
+            <h3>Display</h3>
+            <p><strong>Screen Size:</strong> 8 inches</p>
+            <p><strong>Resolution:</strong> 1080p</p>
+            <p><strong>Refresh Rate:</strong> Up to 60fps</p>
+          </div>
+
+          <!-- Controller Features -->
+          <div>
+            <h3>Controller Features</h3>
+            <p>
+              <strong>DualSense Wireless Controller:</strong> Haptic feedback,
+              adaptive triggers, responsive vibrations, dynamic resistance.
+            </p>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p><strong>Wireless:</strong> Wi-Fi 5 (802.11ac)</p>
+            <p><strong>Ports:</strong> USB-C</p>
+          </div>
+
+          <!-- Performance -->
+          <div>
+            <h3>Performance</h3>
+            <p><strong>Frame Rates:</strong> Up to 60fps</p>
+            <p><strong>Resolution:</strong> 1080p</p>
+          </div>
+
+          <!-- Storage -->
+          <div>
+            <h3>Storage</h3>
+            <p><strong>Internal Storage:</strong> 32 GB</p>
+            <p>
+              Expandable via microSDHC or microSDXC cards (sold separately).
+            </p>
+          </div>
+
+          <!-- Audio -->
+          <div>
+            <h3>Audio</h3>
+            <p><strong>Speakers:</strong> Stereo</p>
+            <p><strong>Headphone Jack:</strong> 3.5mm</p>
+          </div>
+
+          <!-- Battery -->
+          <div>
+            <h3>Battery</h3>
+            <p><strong>Battery Type:</strong> Lithium-ion</p>
+            <p><strong>Battery Life:</strong> Up to 5 hours</p>
+            <p><strong>Charge Time:</strong> Approximately 3 hours via USB-C</p>
+          </div>
+
+          <!-- Dimensions & Weight -->
+          <div>
+            <h3>Dimensions & Weight</h3>
+            <p><strong>Dimensions:</strong> 7.5 × 5 × 1 inches</p>
+            <p><strong>Weight:</strong> 1.5 lbs</p>
+          </div>
+
+          <!-- Additional Features -->
+          <div>
+            <h3>Additional Features</h3>
+            <ul>
+              <li>Built-in haptic feedback and adaptive triggers</li>
+              <li>Full HD 1080p display</li>
+              <li>Seamless remote play experience</li>
+              <li>Compact and portable design</li>
+              <li>Compatible with PlayStation 5 and PlayStation 4 games</li>
+            </ul>
+          </div>
+
+          <!-- Included Accessories -->
+          <div>
+            <h3>Included Accessories</h3>
+            <ul>
+              <li>PlayStation Portal Remote Player</li>
+              <li>DualSense Wireless Controller</li>
+              <li>USB-C Charging Cable</li>
+              <li>Quick Start Guide</li>
+              <li>Warranty Card</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

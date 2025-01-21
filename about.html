@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>About Us - Grass</title>
+    <link rel="stylesheet" href="about.css" >
+    <link rel="manifest" href="manifest.json" >
+    <meta name="theme-color" content="#2196f3" >
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/icon512_rounded.png" >
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo" >
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+            <li><a href="gamesmain.html">Games</a></li>
+            <li><a href="faq.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="intro">
+        <div class="intro-text">
+          <h1>About Grass</h1>
+          <p>
+            At Grass, we believe gaming is more than just a hobby—it's a way of
+            life. Whether you're a fan of the
+            <span style="color: #8c52ff"
+              >latest gaming consoles or an aficionado of timeless
+              classics,</span
+            >
+            we strive to offer everything you need to enhance your gaming
+            experience.
+          </p>
+        </div>
+        <img src="images/console.webp" alt="Gameboy" >
+      </div>
+
+      <!-- Branch Information -->
+      <h2 class="branch-heading">Our Branches</h2>
+      <div class="branches">
+        <div class="branch">
+          <img src="images/unionplace.webp" alt="Union Place Building">
+          <div class="branch-text">
+            <h3>Unionplace Branch</h3>
+            <p><strong>Address:</strong> 388 Union Pl, Colombo 00200</p>
+            <p><strong>Opening Hours:</strong> 8:00 AM - 8:00 PM</p>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4043.2816088632426!2d79.85865397509!3d6.918595293081034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae2596d3cb8fe07%3A0x2b0ae2edd563a661!2sAsia%20Pacific%20Institute%20of%20Information%20Technology%20(APIIT)!5e1!3m2!1sen!2slk!4v1734036826746!5m2!1sen!2slk"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+        <div class="branch">
+          <img src="images/tower2.webp" alt="Access Tower 2" >
+          <div class="branch-text">
+            <h3>Access Tower Branch</h3>
+            <p><strong>Address:</strong> 278 Union Pl, Colombo 00200</p>
+            <p><strong>Opening Hours:</strong> 9:00 AM - 7:00 PM</p>
+          </div>
+        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4043.267831951771!2d79.85747099999999!3d6.920204000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25914a9024d4b%3A0x6d7ee17184e8d295!2sAccess%20Tower%20II!5e1!3m2!1sen!2slk!4v1734036682591!5m2!1sen!2slk"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        >
+        </iframe>
+      </div>
+
+      <!-- Summary Table -->
+      <div class="summary">
+        <h2>Store Summary</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Branch</th>
+              <th>Address</th>
+              <th>Opening Hours</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Union Pl Branch</td>
+              <td>388 Union Pl, Colombo 00200</td>
+              <td>8:00 AM - 8:00 PM</td>
+            </tr>
+            <tr>
+              <td>Access tower 2 Branch</td>
+              <td>278 Union Pl, Colombo 00200</td>
+              <td>9:00 AM - 7:00 PM</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3">Visit us at your nearest branch!</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul class="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="faq.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: support@grassgaming.com</p>
+          <p>Phone: 074 036 5440</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GRASS. All Rights Reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptions.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html" class="active">Consoles</a></li>
+            <li><a href="ph.html">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-overview">
+        <div class="product-image">
+          <img src="cimages\xbox s.png" alt="Xbox Series S Console" />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>Xbox Series S Console</li>
+            <li>Xbox Wireless Controller</li>
+            <li>HDMI Cable</li>
+            <li>Power Cable</li>
+            <li>AA Batteries for Controller</li>
+            <li>Quick Start Guide</li>
+            <li>Warranty Card</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <div class="feature">
+          <h3>Introducing the Xbox Series S</h3>
+          <p>
+            Introducing the Xbox Series S, the smallest, sleekest Xbox console
+            ever. Experience the speed and performance of a next-gen all-digital
+            console at an accessible price point. Go all-digital and enjoy
+            disc-free, next-gen gaming with the smallest Xbox console ever made.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Xbox Velocity Architecture</h3>
+          <p>
+            Experience next-gen speed and performance with the Xbox Velocity
+            Architecture, powered by a custom SSD and integrated software. This
+            architecture enables faster load times, seamless gameplay, and the
+            ability to switch between multiple games in an instant.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Access Your Favorite Entertainment</h3>
+          <p>
+            Access your favorite entertainment through apps like YouTube,
+            Netflix, and more. Enjoy a versatile multimedia experience alongside
+            your gaming sessions.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Xbox Game Pass Trial</h3>
+          <p>
+            Enjoy over 100 games right out of the box with a 1-month Xbox Game
+            Pass trial. Discover new titles and enjoy a vast library of games
+            across multiple genres.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>4K Streaming and Blu-ray Movies</h3>
+          <p>
+            Watch 4K Blu-ray movies and stream 4K video on Netflix, Amazon,
+            Hulu, Microsoft Movies & TV, and more. Experience stunning visuals
+            and immersive sound quality.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Play with Friends and Family</h3>
+          <p>
+            Play with friends and family near and far—sitting together on the
+            sofa or connecting with players around the world on Xbox Live, the
+            fastest, most reliable gaming network.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Backward Compatibility</h3>
+          <p>
+            Xbox One games and accessories work together seamlessly, ensuring
+            you can continue enjoying your favorite titles and peripherals
+            without any hassle.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>Xbox Series S Console Specifications</h2>
+        <div class="specifications">
+          <!-- General Specifications -->
+          <div>
+            <h3>General</h3>
+            <p><strong>Brand:</strong> Xbox</p>
+            <p><strong>Model:</strong> Europe – CFI-7021</p>
+            <p><strong>Warranty:</strong> 1 Year</p>
+            <p><strong>Weight:</strong> 3.5 kg</p>
+            <p><strong>Dimensions:</strong> 27.5 × 15.1 × 6.5 cm</p>
+          </div>
+
+          <!-- Performance -->
+          <div>
+            <h3>Performance</h3>
+            <p>
+              <strong>Processor:</strong> Custom AMD Zen 2 CPU with 8 cores at
+              3.6 GHz
+            </p>
+            <p>
+              <strong>Graphics:</strong> Custom AMD RDNA 2 GPU with 4 teraflops
+            </p>
+            <p><strong>Memory:</strong> 10 GB GDDR6</p>
+            <p><strong>Storage:</strong> 512 GB NVMe SSD</p>
+          </div>
+
+          <!-- Display Features -->
+          <div>
+            <h3>Display Features</h3>
+            <p><strong>Resolution:</strong> Up to 1440p</p>
+            <p><strong>Frame Rates:</strong> Up to 120 frames per second</p>
+            <p>
+              <strong>Ray Tracing:</strong> Advanced Ray Tracing for realistic
+              lighting and reflections
+            </p>
+            <p>
+              <strong>Refresh Rate Support:</strong> 60Hz and 120Hz displays
+            </p>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p><strong>Ports:</strong> HDMI 2.1, USB 3.1, Ethernet</p>
+            <p><strong>Wireless:</strong> Wi-Fi 6, Bluetooth 5.0</p>
+          </div>
+
+          <!-- Storage & Memory -->
+          <div>
+            <h3>Storage & Memory</h3>
+            <p><strong>Internal Storage:</strong> 512 GB NVMe SSD</p>
+            <p>
+              <strong>Expandable Storage:</strong> Proprietary expansion slot
+              (sold separately)
+            </p>
+          </div>
+
+          <!-- Key Features -->
+          <div>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Xbox Velocity Architecture for ultra-fast load times</li>
+              <li>
+                Backward compatibility with Xbox One games and accessories
+              </li>
+              <li>Xbox Game Pass available (membership sold separately)</li>
+              <li>Smart Delivery for seamless game upgrades</li>
+              <li>Compact and sleek design</li>
+            </ul>
+          </div>
+
+          <!-- Included Accessories -->
+          <div>
+            <h3>Included Accessories</h3>
+            <ul>
+              <li>Xbox Series S Console</li>
+              <li>Xbox Wireless Controller</li>
+              <li>HDMI Cable</li>
+              <li>Power Cable</li>
+              <li>AA Batteries for Controller</li>
+              <li>Quick Start Guide</li>
+              <li>Warranty Card</li>
+            </ul>
+          </div>
+
+          <!-- System Requirements -->
+          <div>
+            <h3>System Requirements</h3>
+            <p>
+              <strong>Supported Platforms:</strong> Compatible with various
+              platforms supporting Xbox Series S.
+            </p>
+            <p>
+              <strong>Internet Connection:</strong> Required for online features
+              and updates
+            </p>
+            <p><strong>Storage:</strong> 512 GB NVMe SSD (internal)</p>
+          </div>
+
+          <!-- Environmental Specifications -->
+          <div>
+            <h3>Environmental Specifications</h3>
+            <p><strong>Operating Temperature Range:</strong> 5°C to 35°C</p>
+            <p><strong>Operating Humidity Range:</strong> 20% to 80% RH</p>
+            <p><strong>Storage Temperature Range:</strong> -20°C to 45°C</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

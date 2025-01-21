@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptions.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <!-- You can replace these with an actual icon or use lines -->
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html" class="active">Consoles</a></li>
+            <li><a href="ph.html">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Product Overview -->
+      <section class="product-overview">
+        <div class="product-image">
+          <img src="cimages\pro.png" alt="PlayStation 5 Pro Console" />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>PlayStation 5 Pro Console</li>
+            <li>DualSense Wireless Controller</li>
+            <li>2TB SSD</li>
+            <li>2 Horizontal Stand Feet</li>
+            <li>HDMI Cable</li>
+            <li>AC Power Cord</li>
+            <li>Printed Materials</li>
+            <li>ASTRO’s PLAYROOM (Pre-installed Game)</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <div class="feature">
+          <h3>PlayStation Spectral Super Resolution (PSSR)</h3>
+          <p>
+            Get super sharp image clarity on your 4K TV using AI-enhanced
+            resolution for ultra-high definition play with astonishing detail.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Optimized Console Performance</h3>
+          <p>
+            Reach higher and more consistent frame rates for silky smooth
+            gameplay with support for 60Hz and 120Hz displays.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Advanced Ray Tracing</h3>
+          <p>
+            Experience next-level realism with ray-traced reflections, shadows,
+            and high-quality global illumination as you explore stunning game
+            worlds.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Included in Box</h3>
+          <p>
+            PS5 Pro console, DualSense wireless controller, 2TB SSD, 2
+            Horizontal Stand Feet, HDMI cable, AC power cord, printed materials,
+            ASTRO’s PLAYROOM (Pre-installed game).
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>PlayStation 5 Pro Console Specifications</h2>
+        <div class="specifications">
+          <!-- General Specifications -->
+          <div>
+            <h3>General</h3>
+            <p><strong>Brand:</strong> PlayStation 5</p>
+            <p><strong>Model:</strong> Europe – CFI-7021</p>
+            <p><strong>Warranty:</strong> 1 Year</p>
+            <p><strong>Weight:</strong> 5.20 kg</p>
+          </div>
+
+          <!-- Display Features -->
+          <div>
+            <h3>Display Features</h3>
+            <p>
+              <strong>PlayStation Spectral Super Resolution (PSSR):</strong>
+              AI-enhanced resolution for ultra-high definition play.
+            </p>
+            <p>
+              <strong>Optimized Console Performance:</strong> Supports 60Hz and
+              120Hz displays for consistent frame rates.
+            </p>
+            <p>
+              <strong>Advanced Ray Tracing:</strong> Realistic reflections,
+              shadows, and global illumination.
+            </p>
+          </div>
+
+          <!-- Included Accessories -->
+          <div>
+            <h3>Included Accessories</h3>
+            <ul>
+              <li>DualSense Wireless Controller</li>
+              <li>2TB SSD</li>
+              <li>2 Horizontal Stand Feet</li>
+              <li>HDMI Cable</li>
+              <li>AC Power Cord</li>
+              <li>Printed Materials</li>
+              <li>ASTRO’s PLAYROOM (Pre-installed Game)</li>
+            </ul>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p><strong>Options:</strong> Wired – USB, Wireless</p>
+            <p><strong>Ports:</strong> HDMI, USB 2.0</p>
+          </div>
+
+          <!-- Performance -->
+          <div>
+            <h3>Performance</h3>
+            <p><strong>Frame Rates:</strong> Up to 120Hz</p>
+            <p><strong>Resolution:</strong> 4K Ultra HD</p>
+          </div>
+
+          <!-- System Requirements -->
+          <div>
+            <h3>System Requirements</h3>
+            <p>
+              <strong>Operating Systems:</strong> Compatible with various
+              platforms supporting PS5.
+            </p>
+          </div>
+
+          <!-- Environmental Specifications -->
+          <div>
+            <h3>Environmental Specifications</h3>
+            <p>
+              <strong>Operating Conditions:</strong> Suitable for various
+              environments as per PlayStation standards.
+            </p>
+          </div>
+
+          <!-- Dimensions & Weight -->
+          <div>
+            <h3>Dimensions & Weight</h3>
+            <p>
+              <strong>Dimensions:</strong> [Insert specific dimensions if
+              available]
+            </p>
+            <p><strong>Weight:</strong> 5.20 kg</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

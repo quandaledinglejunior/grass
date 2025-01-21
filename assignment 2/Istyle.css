@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'TT Octosquares';
+    src: url('TT Octosquares-Black.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'TT Octosquares';
+    src: url('TT Octosquares-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'TT Octosquares', Arial, sans-serif;
+    background: url('bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+  
+  /* Header Styles */
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 30px;
+}
+  
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+header .logo img {
+    max-height: 40px; /* Adjust the size of the logo */
+    width: auto;
+    padding-right: 20px;
+    margin-left: 50px;
+}
+
+
+header .logo {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: white; 
+  }
+  
+header nav .menu {
+    list-style: none;
+    display: flex;
+    gap: 12px;
+    margin-left: auto;
+    margin-right: 50px;
+}
+  
+header nav .menu li {
+    display: inline;
+}
+  
+header nav .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: normal; /* Changed from 500 to normal */
+    padding: 5px 16px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+  
+header nav .menu a:hover,
+header nav .menu a.active {
+    color: white;
+    background-color: #8c52ff;
+    border-color: #8c52ff;
+    box-shadow: 0 4px 8px rgba(140, 82, 255, 0.6);
+}
+  
+/* Body Section (Hero) */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center; /* Center vertically */
+  text-align: left;
+  background: url('bg.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  padding: 0 50px; /* Space from the left */
+}
+
+.hero-content {
+  max-width: 600px; /* Limit width for better readability */
+  margin-bottom: 100px;
+  margin-left: 30px;
+}
+
+.hero-content .brand {
+  font-size: 2.5rem; /* Smaller size for the brand name */
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 200px;
+  margin-bottom: 50px;
+}
+
+.hero-content .tagline {
+  font-size: 6.5rem; /* Larger size for the main tagline */
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+}
+
+/* Corner GIF Styling */
+.gif-container {
+    position: relative;
+}
+  
+.corner-gif {
+    position: absolute;
+    bottom: 20px; /* Adjust distance from the bottom */
+    right: 20px; /* Adjust distance from the right */
+    width: 300px; /* Set desired GIF width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    margin-bottom: 65px;
+}
+  

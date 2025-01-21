@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Gaming Consoles</title>
+    <link rel="stylesheet" href="consoles.css" >
+    <link rel="manifest" href="manifest.json" >
+    <meta name="theme-color" content="#2196f3" >
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" >
+    <link rel="apple-touch-icon" href="/images/favicon.png" >
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+              <a href="consolesmain.html" class="active"
+                >Consoles & Peripherals</a
+              >
+            </li>
+            <li><a href="gamesmain.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Power Up Your Experience</h1>
+          <p>
+            Step into the future of gaming with the latest consoles offering
+            unparalleled graphics, lightning-fast performance, and seamless
+            gameplay. Elevate every moment of your adventure.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="play.gif" alt="controller gif" >
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="grid-section">
+      <h2>Our Collection</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <a href="ps5.html">
+            <div class="item-name">PS 5</div>
+            <img src="cimages/ps5.png" alt="Gaming Mouse" >
+            <div class="item-price">Price: LKR 200,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="ps5pro.html">
+            <div class="item-name">PS 5 PRO</div>
+            <img src="cimages/pro.png" alt="Gaming Keyboard" >
+            <div class="item-price">Price: LKR 295,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="xx.html">
+            <div class="item-name">XBOX SERIES X</div>
+            <img src="cimages/xbox-x.png" alt="Gaming Headset" >
+            <div class="item-price">Price: LKR 198,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="xs.html">
+            <div class="item-name">XBOX SERIES S</div>
+            <img src="cimages/xbox-s.png" alt="Controller" >
+            <div class="item-price">Price: LKR 125,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="nintendos.html">
+            <div class="item-name">NINTENDO SWITCH</div>
+            <img src="cimages/nintendo-swtich.avif" alt="Gaming Chair" >
+            <div class="item-price">Price: LKR 115,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="3ds.html">
+            <div class="item-name">NINTENDO 3DS</div>
+            <img src="cimages/3ds.png" alt="Gaming Monitor" >
+            <div class="item-price">Price: LKR 40,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="portal.html">
+            <div class="item-name">PLAYSTATION PORTAL</div>
+            <img src="cimages/portal.webp" alt="Controller" >
+            <div class="item-price">Price: LKR 128,888.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="valve.html">
+            <div class="item-name">VALVE STEAM DECK</div>
+            <img src="cimages/deck.png" alt="Controller" >
+            <div class="item-price">Price: LKR 258,888.00</div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Grass Logo" >
+          <span>GRASS</span>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul class="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+            <li><a href="gamesmain.html">Games</a></li>
+            <li><a href="faq.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: support@grassgaming.com</p>
+          <p>Phone: 074 036 5440</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GRASS. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

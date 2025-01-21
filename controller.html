@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptionsp.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html">Consoles</a></li>
+            <li><a href="ph.html" class="active">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-overview">
+        <div class="product-image">
+          <img
+            src="pimages\controller.webp"
+            alt="FANTECH WGP14 V2 NOVA Pro Multi-Platform Hall-Effect Game Controller"
+          />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>FANTECH WGP14 V2 NOVA Pro Game Controller</li>
+            <li>Wireless USB Receiver</li>
+            <li>Charging Cable</li>
+            <li>USB Cable (Wired Connection)</li>
+            <li>User Manual</li>
+            <li>Warranty Card</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <div class="feature">
+          <h3>Precision Control Without Drift</h3>
+          <p>
+            Never worry about stick drift again! The Nova WGP14 V2 features
+            premium anti-drift hall effect sticks, delivering ultra-precise
+            circularity input without dead zones. Experience true control
+            without hassle, thanks to authentic K-Silver JH16 hall-effect sticks
+            that offer superior centering and deadzone performance compared to
+            other hall-effect controllers.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Connectivity Without Limits</h3>
+          <p>
+            Seamlessly switch between wired and Bluetooth 5.3 connections,
+            ensuring compatibility across a plethora of devices for
+            uninterrupted gaming sessions. Enjoy the freedom of wireless
+            connectivity without compromising on responsiveness or performance.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Precision in Every Move</h3>
+          <p>
+            Enjoy three-level adjustable Turbo mode and an anti-drift hall
+            effect stick for unparalleled accuracy and control, giving you the
+            edge in every game. Whether you're executing quick maneuvers or
+            precise shots, the WGP14 V2 responds flawlessly to your commands.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Engaging Sensory Experience</h3>
+          <p>
+            Immerse yourself with an active motion sensor, rumble feedback, and
+            a responsive touchpad, elevating your gaming experience to new
+            heights of immersion and interaction. Feel every action and movement
+            in-game for a truly captivating experience.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Audio Amplified</h3>
+          <p>
+            Experience rich soundscapes with the built-in audio port and
+            speaker, enhancing the atmosphere of your games with crystal-clear
+            audio wherever you play. Communicate seamlessly with teammates and
+            enjoy immersive in-game sounds without additional accessories.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Rapid Recharge, Endless Adventure</h3>
+          <p>
+            Spend less time waiting and more time gaming with a quick two-hour
+            charging time, ensuring you’re always ready to embark on gaming
+            adventures across a multitude of compatible platforms. The
+            long-lasting battery life keeps you in the game longer.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>FANTECH WGP14 V2 NOVA Pro Gaming Controller Specifications</h2>
+        <div class="specifications">
+          <!-- General Specifications -->
+          <div>
+            <h3>General</h3>
+            <p><strong>Brand:</strong> FANTECH</p>
+            <p><strong>Colour:</strong> Black</p>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p><strong>Options:</strong> Wired – USB, Wireless</p>
+          </div>
+
+          <!-- Features -->
+          <div>
+            <h3>Features</h3>
+            <p>
+              <strong>Hall Effect Sticks:</strong> Premium anti-drift with
+              K-Silver JH16 switches
+            </p>
+            <p><strong>Turbo Mode:</strong> Three-level adjustable</p>
+            <p>
+              <strong>Motion Sensor:</strong> Active motion sensing for enhanced
+              interaction
+            </p>
+            <p><strong>Rumble Feedback:</strong> Immersive vibration effects</p>
+            <p><strong>Touchpad:</strong> Responsive multi-function touchpad</p>
+          </div>
+
+          <!-- Audio -->
+          <div>
+            <h3>Audio</h3>
+            <p><strong>Built-in Speaker:</strong> Yes</p>
+            <p><strong>Audio Port:</strong> Built-in for enhanced sound</p>
+          </div>
+
+          <!-- Battery -->
+          <div>
+            <h3>Battery</h3>
+            <p><strong>Charging Time:</strong> 2 hours</p>
+            <p>
+              <strong>Battery Life:</strong> Rapid recharge with extended usage
+            </p>
+          </div>
+
+          <!-- Compatibility -->
+          <div>
+            <h3>Compatibility</h3>
+            <ul>
+              <li>PC</li>
+              <li>Mac</li>
+              <li>PlayStation® 5</li>
+              <li>Nintendo Switch™</li>
+              <li>Mobile Devices</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

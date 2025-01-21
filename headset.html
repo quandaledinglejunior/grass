@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptionsp.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html">Consoles</a></li>
+            <li><a href="ph.html" class="active">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-overview">
+        <div class="product-image">
+          <img
+            src="pimages\headset.webp"
+            alt="ASUS ROG Delta S Wireless Gaming Headset"
+          />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>ASUS ROG Delta S Wireless Gaming Headset</li>
+            <li>Wireless USB Dongle</li>
+            <li>Bluetooth® Adapter</li>
+            <li>Charging Cable</li>
+            <li>User Manual</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <div class="feature">
+          <h3>Immersive Wireless Connectivity</h3>
+          <p>
+            Experience freedom with lightweight wireless connectivity using both
+            2.4 GHz and Bluetooth®, allowing seamless switching between devices
+            without compromising on performance.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Superior Sound Quality</h3>
+          <p>
+            Equipped with exclusive 50 mm ASUS Essence drivers and an airtight
+            chamber design, the Delta S delivers rich, immersive soundscapes
+            that enhance every gaming session.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Advanced Microphone Technology</h3>
+          <p>
+            AI Beamforming Microphones with AI Noise Cancelation ensure
+            exceptional voice pick-up, reducing over 500 million types of
+            background noise for crystal-clear in-game communication.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Long-Lasting Battery Life</h3>
+          <p>
+            Fast charging provides up to 3 hours of use with just a 15-minute
+            charge, and enjoy up to 25 hours of total battery life for
+            uninterrupted gaming sessions.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Ergonomic Design</h3>
+          <p>
+            The lightweight design with ergonomic D-shaped ear cushions ensures
+            long-lasting comfort, allowing you to game for hours without
+            fatigue.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Extensive Compatibility</h3>
+          <p>
+            Compatible with PCs, Macs, PlayStation® 5, Nintendo Switch™, and
+            mobile devices, the Delta S offers versatile connectivity options
+            for all your gaming platforms.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>ASUS ROG Delta S Wireless Gaming Headset Specifications</h2>
+        <div class="specifications">
+          <!-- General Specifications -->
+          <div>
+            <h3>General</h3>
+            <p><strong>Weight:</strong> 514 g</p>
+            <p><strong>Brand:</strong> ASUS</p>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p><strong>Wireless:</strong> 2.4 GHz and Bluetooth®</p>
+          </div>
+
+          <!-- Sound Features -->
+          <div>
+            <h3>Sound Features</h3>
+            <p><strong>Drivers:</strong> 50 mm ASUS Essence</p>
+            <p><strong>Sound Design:</strong> Airtight Chamber</p>
+            <p>
+              <strong>Microphones:</strong> AI Beamforming with AI Noise
+              Cancelation
+            </p>
+          </div>
+
+          <!-- Battery Life -->
+          <div>
+            <h3>Battery Life</h3>
+            <p><strong>Fast Charging:</strong> 15 minutes for 3 hours of use</p>
+            <p><strong>Total Battery Life:</strong> Up to 25 hours</p>
+          </div>
+
+          <!-- Comfort & Design -->
+          <div>
+            <h3>Comfort & Design</h3>
+            <p>
+              <strong>Design:</strong> Lightweight with ergonomic D-shaped ear
+              cushions
+            </p>
+            <p>
+              <strong>Build:</strong> Durable and comfortable for extended
+              gaming sessions
+            </p>
+          </div>
+
+          <!-- Compatibility -->
+          <div>
+            <h3>Compatibility</h3>
+            <ul>
+              <li>PC</li>
+              <li>Mac</li>
+              <li>PlayStation® 5</li>
+              <li>Nintendo Switch™</li>
+              <li>Mobile Devices</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

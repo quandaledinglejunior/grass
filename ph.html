@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gaming Peripherals</title>
+    <link rel="stylesheet" href="ph.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>
+              <a href="consolesmain.html" class="active"
+                >Consoles & Peripherals</a
+              >
+            </li>
+            <li><a href="gamesmain.html">Games</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section 1 -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Enhance Your Gaming Setup</h1>
+          <p>
+            Discover cutting-edge gaming peripherals designed to boost your
+            gaming experience. From ergonomic designs to high-end performance,
+            we have everything you need for gaming excellence.
+          </p>
+        </div>
+        <div class="hero-image">
+          <img src="controller.gif" alt="controller gif" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="grid-section">
+      <h2>Our Collection</h2>
+      <div class="grid">
+        <div class="grid-item">
+          <a href="g502.html">
+            <div class="item-name">LOGITECH G502 HERO</div>
+            <img src="pimages\mouse.webp" alt="Gaming Mouse" />
+            <div class="item-price">Price: LKR 16,750.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="k70.html">
+            <div class="item-name">Corsair K70 RGB PRO</div>
+            <img src="pimages\keyboard.webp" alt="Gaming Keyboard" />
+            <div class="item-price">Price: LKR 58,500.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="headset.html">
+            <div class="item-name">ASUS ROG Delta S</div>
+            <img src="pimages\headset.webp" alt="Gaming Headset" />
+            <div class="item-price">Price: LKR 51,400.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="chair.html">
+            <div class="item-name">GALAX GC</div>
+            <img src="pimages\chair.webp" alt="Gaming Chair" />
+            <div class="item-price">Price: LKR 73,150.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="monitor.html">
+            <div class="item-name">34″ MSI MAG 341CQP QD-OLED 170Hz UWQHD</div>
+            <img src="pimages\monitor.webp" alt="Gaming Monitor" />
+            <div class="item-price">Price: LKR 464,500.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="controller.html">
+            <div class="item-name">FANTECH WGP14 V2 NOVA</div>
+            <img src="pimages\controller.webp" alt="Controller" />
+            <div class="item-price">Price: LKR 12,000.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="camera.html">
+            <div class="item-name">
+              LOGITECH RALLY 4K PTZ CONFERENCING CAMERA
+            </div>
+            <img src="pimages\cam.webp" alt="Controller" />
+            <div class="item-price">Price: LKR 355,500.00</div>
+          </a>
+        </div>
+        <div class="grid-item">
+          <a href="printer.html">
+            <div class="item-name">HP CLJ Pro M155A Printer</div>
+            <img src="pimages\printer.webp" alt="Controller" />
+            <div class="item-price">Price: LKR 58,900.00</div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Grass Logo" />
+        <span>GRASS</span>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul class="menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+          <li><a href="gamesmain.html">Games</a></li>
+          <li><a href="faq.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@grassgaming.com</p>
+        <p>Phone: 074 036 5440</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 GRASS. All Rights Reserved.</p>
+    </div>
+  </footer>
+</html>

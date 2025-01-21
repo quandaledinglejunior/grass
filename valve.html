@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptions.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html" class="active">Consoles</a></li>
+            <li><a href="ph.html">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-overview">
+        <div class="product-image">
+          <img src="cimages\deck.png" alt="Steam Deck" />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>Steam Deck</li>
+            <li>USB-C Charging Cable</li>
+            <li>Carry Case</li>
+            <li>Quick Start Guide</li>
+            <li>Warranty Card</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <!-- Features -->
+        <div class="feature">
+          <h3>Portability Meets Power</h3>
+          <p>
+            We partnered with AMD to create Steam Deck’s custom APU, optimized
+            for handheld gaming. It is a Zen 2 + RDNA 2 powerhouse, delivering
+            more than enough performance to run the latest AAA games in a very
+            efficient power envelope.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Your Steam Library, Anywhere</h3>
+          <p>
+            Once you’ve logged into Steam Deck, your entire Steam Library shows
+            up, just like any other PC. You’ll also see the compatibility rating
+            of each game, indicating the kind of experience you can expect when
+            playing. You can dynamically filter any view in your library by
+            compatibility rating if you’re looking for specific sorts of
+            experiences.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Control with Comfort</h3>
+          <p>
+            The Steam Deck was built for extended play sessions—whether you’re
+            using thumbsticks or trackpads—with full-size controls positioned
+            perfectly within your reach. The rear of the device is sculpted to
+            comfortably fit a wide range of hand sizes.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>Steam Deck Specifications</h2>
+        <div class="specifications">
+          <!-- Compute -->
+          <div>
+            <h3>Compute</h3>
+            <p><strong>Processor:</strong> AMD APU</p>
+            <p>
+              <strong>CPU:</strong> Zen 2 4c/8t, 2.4-3.5GHz (up to 448 GFlops
+              FP32)
+            </p>
+            <p>
+              <strong>GPU:</strong> 8 RDNA 2 CUs, 1.0-1.6GHz (up to 1.6 TFlops
+              FP32)
+            </p>
+            <p><strong>APU Power:</strong> 4-15W</p>
+            <p>
+              <strong>RAM:</strong> 16 GB LPDDR5 on-board RAM (5500 MT/s quad
+              32-bit channels)
+            </p>
+            <p><strong>Storage:</strong></p>
+            <ul>
+              <li>64 GB eMMC (PCIe Gen 2 x1)</li>
+              <li>256 GB NVMe SSD (PCIe Gen 3 x4 or PCIe Gen 3 x2*)</li>
+              <li>512 GB NVMe SSD (PCIe Gen 3 x4 or PCIe Gen 3 x2*)</li>
+            </ul>
+            <p>
+              *Some 256GB and 512GB models ship with a PCIe Gen 3 x2 SSD. In our
+              testing, we did not see any impact to gaming performance between
+              x2 and x4.
+            </p>
+            <p>
+              All models use socketed 2230 m.2 modules (not intended for
+              end-user replacement).
+            </p>
+            <p>All models include high-speed microSD card slot.</p>
+          </div>
+
+          <!-- Controls and Input -->
+          <div>
+            <h3>Controls and Input</h3>
+            <p><strong>Gamepad Controls:</strong></p>
+            <ul>
+              <li>A, B, X, Y buttons</li>
+              <li>D-pad</li>
+              <li>L & R analog triggers</li>
+              <li>L & R bumpers</li>
+              <li>View & Menu buttons</li>
+              <li>4 x assignable grip buttons</li>
+            </ul>
+            <p>
+              <strong>Thumbsticks:</strong> 2 x full-size analog sticks with
+              capacitive touch
+            </p>
+            <p><strong>Haptics:</strong> HD haptics</p>
+            <p>
+              <strong>Trackpads:</strong> 2 x 32.5mm square trackpads with
+              haptic feedback, 55% better latency compared to Steam Controller,
+              pressure-sensitivity for configurable click strength
+            </p>
+            <p><strong>Gyro:</strong> 6-Axis IMU</p>
+          </div>
+
+          <!-- Display -->
+          <div>
+            <h3>Display</h3>
+            <p>
+              <strong>Resolution:</strong> 1280 x 800px (16:10 aspect ratio)
+            </p>
+            <p>
+              <strong>Type:</strong> Optically bonded IPS LCD for enhanced
+              readability
+            </p>
+            <p><strong>Display Size:</strong> 7″ diagonal</p>
+            <p><strong>Brightness:</strong> 400 nits typical</p>
+            <p><strong>Refresh Rate:</strong> 60Hz</p>
+            <p><strong>Touch Enabled:</strong> Yes</p>
+            <p><strong>Sensors:</strong> Ambient light sensor</p>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p>
+              <strong>Bluetooth:</strong> Bluetooth 5.0 (support for
+              controllers, accessories, and audio)
+            </p>
+            <p>
+              <strong>Wi-Fi:</strong> Dual-band Wi-Fi radio, 2.4GHz and 5GHz, 2
+              x 2 MIMO, IEEE 802.11a/b/g/n/ac
+            </p>
+            <p>
+              <strong>Video Output:</strong> Up to 8K @60Hz or 4K @120Hz via
+              USB-C with DisplayPort 1.4 Alt-mode support; USB 3.2 Gen 2
+            </p>
+          </div>
+
+          <!-- Audio -->
+          <div>
+            <h3>Audio</h3>
+            <p>
+              <strong>Channels:</strong> Stereo with embedded DSP for an
+              immersive listening experience
+            </p>
+            <p><strong>Microphones:</strong> Dual microphone array</p>
+            <p>
+              <strong>Headphone/Mic Jack:</strong> 3.5mm stereo
+              headphone/headset jack
+            </p>
+            <p>
+              <strong>Digital:</strong> Multichannel audio via DisplayPort over
+              USB-C, standard USB-C, or Bluetooth 5.0
+            </p>
+          </div>
+
+          <!-- Power -->
+          <div>
+            <h3>Power</h3>
+            <p><strong>Input:</strong> 45W USB Type-C PD3.0 power supply</p>
+            <p><strong>Battery:</strong> 40Whr battery</p>
+            <p><strong>Battery Life:</strong> 2 – 8 hours of gameplay</p>
+          </div>
+
+          <!-- Expansion -->
+          <div>
+            <h3>Expansion</h3>
+            <p><strong>microSD:</strong> UHS-I supports SD, SDXC, and SDHC</p>
+            <p>
+              <strong>External Connectivity for Controllers & Displays:</strong>
+              USB-C with DisplayPort 1.4 Alt-mode support; up to 8K @60Hz or 4K
+              @120Hz, USB 3.2 Gen 2
+            </p>
+          </div>
+
+          <!-- Size and Weight -->
+          <div>
+            <h3>Size and Weight</h3>
+            <p><strong>Size:</strong> 298mm x 117mm x 49mm</p>
+            <p><strong>Weight:</strong> Approx. 669 grams</p>
+          </div>
+
+          <!-- Software -->
+          <div>
+            <h3>Software</h3>
+            <p><strong>Operating System:</strong> SteamOS 3.0 (Arch-based)</p>
+            <p><strong>Desktop:</strong> KDE Plasma</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

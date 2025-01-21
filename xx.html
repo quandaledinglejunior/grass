@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="descriptions.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/favicon.png" />
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consoles.html" class="active">Consoles</a></li>
+            <li><a href="ph.html">Peripherals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="product-overview">
+        <div class="product-image">
+          <img src="cimages\xbox x.png" alt="Xbox Series X Console" />
+        </div>
+        <div class="box-contents">
+          <h2>What's in the Box</h2>
+          <ul>
+            <li>Xbox Series X Console</li>
+            <li>Xbox Wireless Controller</li>
+            <li>HDMI Cable</li>
+            <li>Power Cable</li>
+            <li>AA Batteries for Controller</li>
+            <li>Quick Start Guide</li>
+            <li>Warranty Card</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Product Description -->
+      <section class="product-description">
+        <h2>Product Description</h2>
+
+        <div class="feature">
+          <h3>Introducing Xbox Series X</h3>
+          <p>
+            Introducing Xbox Series X, the fastest, most powerful Xbox ever.
+            Play thousands of titles from four generations of consoles—all games
+            look and play best on Xbox Series X.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Xbox Velocity Architecture</h3>
+          <p>
+            Experience next-gen speed and performance with the Xbox Velocity
+            Architecture, powered by a custom SSD and integrated software. This
+            architecture enables faster load times, seamless gameplay, and the
+            ability to switch between multiple games in an instant.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Backward Compatibility</h3>
+          <p>
+            Play thousands of games from four generations of Xbox with backward
+            compatibility, including optimized titles at launch. Enjoy your
+            favorite classics alongside the latest releases with enhanced
+            performance and visuals.
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Xbox Game Pass Ultimate</h3>
+          <p>
+            Download and play over 100 high-quality games, including all new
+            Xbox Game Studios titles like Halo Infinite the day they release,
+            with Xbox Game Pass Ultimate (membership sold separately).
+          </p>
+        </div>
+
+        <div class="feature">
+          <h3>Xbox Smart Delivery</h3>
+          <p>
+            Xbox Smart Delivery ensures you play the best available version of
+            your game no matter which console you’re playing on. Upgrade
+            seamlessly to enhanced versions when available, ensuring optimal
+            performance and visuals.
+          </p>
+        </div>
+      </section>
+
+      <!-- Product Specifications -->
+      <section class="product-specifications">
+        <h2>Xbox Series X Console Specifications</h2>
+        <div class="specifications">
+          <!-- General Specifications -->
+          <div>
+            <h3>General</h3>
+            <p><strong>Brand:</strong> Xbox</p>
+            <p><strong>Model:</strong> Europe – CFI-7021</p>
+            <p><strong>Warranty:</strong> 1 Year</p>
+            <p><strong>Weight:</strong> 6 kg</p>
+            <p><strong>Dimensions:</strong> 151 × 15.1 × 30.1 cm</p>
+          </div>
+
+          <!-- Performance -->
+          <div>
+            <h3>Performance</h3>
+            <p>
+              <strong>Processing Power:</strong> Custom AMD Zen 2 CPU with 8
+              cores at 3.8 GHz (3.6 GHz with SMT)
+            </p>
+            <p>
+              <strong>Graphics:</strong> Custom AMD RDNA 2 GPU with 12 teraflops
+            </p>
+            <p><strong>Memory:</strong> 16 GB GDDR6</p>
+            <p><strong>Storage:</strong> 1 TB NVMe SSD</p>
+          </div>
+
+          <!-- Display Features -->
+          <div>
+            <h3>Display Features</h3>
+            <p><strong>Resolution:</strong> Up to 4K Ultra HD</p>
+            <p><strong>Frame Rates:</strong> Up to 120 frames per second</p>
+            <p>
+              <strong>Ray Tracing:</strong> Advanced Ray Tracing for realistic
+              lighting and reflections
+            </p>
+            <p>
+              <strong>Refresh Rate Support:</strong> 60Hz and 120Hz displays
+            </p>
+          </div>
+
+          <!-- Connectivity -->
+          <div>
+            <h3>Connectivity</h3>
+            <p><strong>Ports:</strong> HDMI 2.1, USB 3.1, Ethernet</p>
+            <p><strong>Wireless:</strong> Wi-Fi 6, Bluetooth 5.0</p>
+          </div>
+
+          <!-- Storage & Memory -->
+          <div>
+            <h3>Storage & Memory</h3>
+            <p><strong>Internal Storage:</strong> 1 TB NVMe SSD</p>
+            <p>
+              <strong>Expandable Storage:</strong> Proprietary expansion slot
+              (sold separately)
+            </p>
+          </div>
+
+          <!-- Features -->
+          <div>
+            <h3>Key Features</h3>
+            <ul>
+              <li>Xbox Velocity Architecture for ultra-fast load times</li>
+              <li>Backward compatibility with thousands of games</li>
+              <li>
+                Xbox Game Pass Ultimate available (membership sold separately)
+              </li>
+              <li>Smart Delivery for seamless game upgrades</li>
+              <li>Advanced cooling system to maintain optimal performance</li>
+            </ul>
+          </div>
+
+          <!-- Included Accessories -->
+          <div>
+            <h3>Included Accessories</h3>
+            <ul>
+              <li>Xbox Series X Console</li>
+              <li>Xbox Wireless Controller</li>
+              <li>HDMI Cable</li>
+              <li>Power Cable</li>
+              <li>AA Batteries for Controller</li>
+              <li>Quick Start Guide</li>
+              <li>Warranty Card</li>
+            </ul>
+          </div>
+
+          <!-- System Requirements -->
+          <div>
+            <h3>System Requirements</h3>
+            <p>
+              <strong>Supported Platforms:</strong> Windows® 10, Xbox One, Xbox
+              Series X|S
+            </p>
+            <p>
+              <strong>Internet Connection:</strong> Required for online features
+              and updates
+            </p>
+            <p><strong>Storage:</strong> 1 TB NVMe SSD (internal)</p>
+          </div>
+
+          <!-- Environmental Specifications -->
+          <div>
+            <h3>Environmental Specifications</h3>
+            <p><strong>Operating Temperature Range:</strong> 5°C to 35°C</p>
+            <p><strong>Operating Humidity Range:</strong> 20% to 80% RH</p>
+            <p><strong>Storage Temperature Range:</strong> -20°C to 45°C</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

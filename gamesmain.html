@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <title>Games - Grass</title>
+    <link rel="stylesheet" href="gamesmain.css" >
+    <link rel="manifest" href="manifest.json" >
+    <meta name="theme-color" content="#2196f3" >
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" >
+    <link rel="apple-touch-icon" href="/images/favicon.png" >
+
+    <script>
+      // Register Service Worker
+      function toggleMenu() {
+        const menu = document.getElementById("navMenu");
+        menu.classList.toggle("show");
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="images/logo.png" alt="Logo">
+          <span>GRASS</span>
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <nav>
+          <ul class="menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+            <li><a href="gamesmain.html" class="active">Games</a></li>
+            <li><a href="faq.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container-img">
+      <div class="image-card">
+        <img id="limg" src="images/games.jpg" alt="peripherals" >
+        <div class="button">
+            <a id="lbutton" class="greater" href="upcoming.html">
+              <span class="arrow"> &lt; </span>
+              <span class="smaller-text">Upcoming</span>
+            </a>
+        </div>
+      </div>
+      <div class="image-card">
+        <img id="rimg" src="images/upcoming.jpg" alt="Consoles" >
+        <div class="button">
+            <a id="rbutton" class="greater" href="games.html">
+              <span class="smaller-text">Games</span>
+              <span class="arrow"> &gt; </span>
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Grass Logo" >
+          <span>GRASS</span>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul class="menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+            <li><a href="gamesmain.html">Games</a></li>
+            <li><a href="faq.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: support@grassgaming.com</p>
+          <p>Phone: 074 036 5440</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 GRASS. All Rights Reserved.</p>
+      </div>
+    </footer>
+    
+  </body>
+</html>

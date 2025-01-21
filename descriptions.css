@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "TT Octosquares";
+  src: url("TT Octosquares-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TT Octosquares";
+  src: url("TT Octosquares-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "TT Octosquares", Arial, sans-serif;
+  background-color: #000123;
+  color: white;
+  line-height: 1.6;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 15px 30px;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+header .logo img {
+  max-height: 40px;
+  width: auto;
+  padding-right: 20px;
+  margin-left: 30px;
+}
+
+header nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin-left: auto;
+  margin-right: 50px;
+}
+
+header nav .menu li {
+  display: inline;
+}
+
+header nav .menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 5px 16px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  transition: 0.3s ease;
+}
+
+header nav .menu a:hover,
+header nav .menu a.active {
+  color: white;
+  background-color: #8c52ff;
+  border-color: #8c52ff;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 20px;
+  width: 30px;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+main {
+  padding-top: 100px;
+}
+
+.product-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 2rem;
+  background-color: #1a1a3d;
+  border-radius: 10px;
+  margin-top: 100px;
+}
+
+.product-image {
+  width: 500px;
+  height: 100%;
+}
+
+.product-overview .product-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.product-overview .box-contents {
+  background-color: #121235;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1;
+}
+
+.product-overview .box-contents h2 {
+  font-size: 1.8rem;
+  color: #8c52ff;
+  margin-bottom: 1rem;
+}
+
+.product-overview .box-contents ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-overview .box-contents ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #1a1a3d;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.product-description h2 {
+  font-size: 1.8rem;
+  color: #8c52ff;
+  margin-bottom: 1rem;
+}
+
+.product-description .feature {
+  margin-bottom: 2rem;
+}
+
+.product-description .feature h3 {
+  font-size: 1.4rem;
+  color: #8c52ff;
+  margin-bottom: 0.5rem;
+}
+
+.product-description .feature p {
+  font-size: 1rem;
+  color: white;
+  line-height: 1.6;
+}
+
+.product-specifications {
+  margin: 2rem;
+  padding: 2rem;
+  background-color: #121235;
+  border-radius: 10px;
+}
+
+.product-specifications h2 {
+  font-size: 1.8rem;
+  color: #8c52ff;
+  margin-bottom: 1rem;
+}
+
+.specifications {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.specifications div {
+  flex: 1 1 calc(33% - 2rem);
+  min-width: 250px;
+}
+
+.specifications h3 {
+  font-size: 1.2rem;
+  color: #8c52ff;
+  margin-bottom: 0.5rem;
+}
+
+.specifications p {
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.specifications ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+}
+
+.specifications ul li {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: white;
+}
+
+.specifications h4 {
+  font-size: 1.1rem;
+  color: #a682ff;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+
+  body {
+    padding: 0px;
+  }
+
+  header .container {
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  header nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0 0 0;
+    gap: 10px;
+  }
+
+  header nav .menu.show {
+    position: absolute;
+    display: flex;
+    background-color: #2b2b48;
+    padding: 20px;
+    border-radius: 20px;
+    left: 10px;
+    top: 50px;
+    width: 95%;
+  }
+
+  header nav .menu li {
+    display: block;
+    text-align: center;
+  }
+
+  .product-overview {
+    padding: 1rem;
+    margin: 1rem;
+    flex-direction: column;
+  }
+
+  .product-overview .product-image {
+    width: 100%; 
+    max-width: 500px; 
+  }
+
+  .product-overview .box-contents {
+    padding: 1rem;
+  }
+
+  .product-description,
+  .product-specifications {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  .product-description h2,
+  .product-specifications h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-description .feature h3,
+  .specifications h3 {
+    font-size: 1.1rem;
+  }
+
+  .specifications h4 {
+    font-size: 1rem;
+  }
+}
