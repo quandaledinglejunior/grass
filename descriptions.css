@@ -123,6 +123,10 @@ main {
   height: 100%;
 }
 
+.product-image img{
+  height: 400px;
+}
+
 .product-overview .product-image img {
   max-width: 100%;
   border-radius: 10px;
