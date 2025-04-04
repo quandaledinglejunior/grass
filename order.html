@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Computer Parts - Grass</title>
+  <link rel="stylesheet" href="order.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#2196f3">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+</head>
+
+<body>
+  <script>
+    // Register Service Worker
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('show');
+    }
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => {
+          console.log("Service Worker registered");
+        })
+        .catch((error) => {
+          console.error("Service Worker registration failed:", error);
+        });
+    }
+  </script>
+
+  <!-- Main Content -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+        <span>GRASS</span>
+      </div>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <span class="minus">-</span>
+        <span class="x">×</span>
+        <span class="plus">+</span>
+      </div>
+      <nav>
+        <ul class="menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+          <li><a href="gamesmain.html">Games</a></li>
+          <li><a href="order.html" class="active">Order Parts</a></li>
+          <li><a href="faq.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="page-hero">
+    <div class="hero-content">
+      <h1>Build Your Dream PC</h1>
+      <p>Select top-quality components for your custom build</p>
+    </div>
+  </section>
+
+  <!-- Order Section -->
+  <section class="order-section">
+    <h2>Select Your Components</h2>
+    
+    <div class="components-container">
+      <!-- Processors Section -->
+      <div class="component-category">
+        <h3>Processors</h3>
+        <div class="component-list">
+          <div class="component-item">
+            <div class="item-details">
+              <h4>AMD Ryzen 9 7950X</h4>
+              <p>16-Core, 32-Thread, Up to 5.7GHz</p>
+              <p class="price">$599</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="AMD Ryzen 9 7950X" data-price="599" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Intel Core i9-14900K</h4>
+              <p>24-Core, 32-Thread, Up to 6.0GHz</p>
+              <p class="price">$589</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Intel Core i9-14900K" data-price="589" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>AMD Ryzen 7 7800X3D</h4>
+              <p>8-Core, 16-Thread, Up to 5.0GHz</p>
+              <p class="price">$449</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="AMD Ryzen 7 7800X3D" data-price="449" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Intel Core i7-14700K</h4>
+              <p>20-Core, 28-Thread, Up to 5.6GHz</p>
+              <p class="price">$409</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Intel Core i7-14700K" data-price="409" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>AMD Ryzen 5 7600X</h4>
+              <p>6-Core, 12-Thread, Up to 5.3GHz</p>
+              <p class="price">$299</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="AMD Ryzen 5 7600X" data-price="299" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Intel Core i5-14600K</h4>
+              <p>14-Core, 20-Thread, Up to 5.3GHz</p>
+              <p class="price">$319</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Intel Core i5-14600K" data-price="319" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Graphics Cards Section -->
+      <div class="component-category">
+        <h3>Graphics Cards</h3>
+        <div class="component-list">
+          <div class="component-item">
+            <div class="item-details">
+              <h4>NVIDIA RTX 4090</h4>
+              <p>24GB GDDR6X, 16384 Cores</p>
+              <p class="price">$1599</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="NVIDIA RTX 4090" data-price="1599" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>AMD Radeon RX 7900 XTX</h4>
+              <p>24GB GDDR6, 12288 Cores</p>
+              <p class="price">$999</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="AMD Radeon RX 7900 XTX" data-price="999" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>NVIDIA RTX 4080 SUPER</h4>
+              <p>16GB GDDR6X, 10240 Cores</p>
+              <p class="price">$999</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="NVIDIA RTX 4080 SUPER" data-price="999" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>AMD Radeon RX 7800 XT</h4>
+              <p>16GB GDDR6, 3840 Cores</p>
+              <p class="price">$499</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="AMD Radeon RX 7800 XT" data-price="499" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>NVIDIA RTX 4070 Ti</h4>
+              <p>12GB GDDR6X, 7680 Cores</p>
+              <p class="price">$799</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="NVIDIA RTX 4070 Ti" data-price="799" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>NVIDIA RTX 4060 Ti</h4>
+              <p>8GB GDDR6, 4352 Cores</p>
+              <p class="price">$399</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="NVIDIA RTX 4060 Ti" data-price="399" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Motherboards Section -->
+      <div class="component-category">
+        <h3>Motherboards</h3>
+        <div class="component-list">
+          <div class="component-item">
+            <div class="item-details">
+              <h4>ASUS ROG Maximus Z790 Hero</h4>
+              <p>Intel Z790, DDR5, PCIe 5.0</p>
+              <p class="price">$599</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="ASUS ROG Maximus Z790 Hero" data-price="599" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>MSI MEG X670E ACE</h4>
+              <p>AMD X670E, DDR5, PCIe 5.0</p>
+              <p class="price">$699</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="MSI MEG X670E ACE" data-price="699" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Gigabyte Z790 AORUS Master</h4>
+              <p>Intel Z790, DDR5, PCIe 5.0</p>
+              <p class="price">$499</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Gigabyte Z790 AORUS Master" data-price="499" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>ASRock B650 PG Riptide</h4>
+              <p>AMD B650, DDR5, PCIe 4.0</p>
+              <p class="price">$169</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="ASRock B650 PG Riptide" data-price="169" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>ASUS TUF Gaming B760M-Plus</h4>
+              <p>Intel B760, DDR4, PCIe 4.0</p>
+              <p class="price">$179</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="ASUS TUF Gaming B760M-Plus" data-price="179" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>MSI MAG B650 TOMAHAWK</h4>
+              <p>AMD B650, DDR5, PCIe 4.0</p>
+              <p class="price">$199</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="MSI MAG B650 TOMAHAWK" data-price="199" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Memory (RAM) Section -->
+      <div class="component-category">
+        <h3>Memory (RAM)</h3>
+        <div class="component-list">
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Corsair Dominator Platinum RGB</h4>
+              <p>32GB (2x16GB) DDR5-6000</p>
+              <p class="price">$189</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Corsair Dominator Platinum RGB" data-price="189" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>G.Skill Trident Z5 RGB</h4>
+              <p>32GB (2x16GB) DDR5-6400</p>
+              <p class="price">$159</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="G.Skill Trident Z5 RGB" data-price="159" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Kingston FURY Beast RGB</h4>
+              <p>32GB (2x16GB) DDR5-5600</p>
+              <p class="price">$139</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Kingston FURY Beast RGB" data-price="139" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Crucial Pro</h4>
+              <p>64GB (2x32GB) DDR5-5600</p>
+              <p class="price">$209</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Crucial Pro" data-price="209" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Storage Devices Section -->
+      <div class="component-category">
+        <h3>Storage Devices</h3>
+        <div class="component-list">
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Samsung 990 PRO</h4>
+              <p>2TB NVMe SSD, PCIe 4.0, 7000 MB/s</p>
+              <p class="price">$189</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Samsung 990 PRO" data-price="189" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>WD_BLACK SN850X</h4>
+              <p>2TB NVMe SSD, PCIe 4.0, 7300 MB/s</p>
+              <p class="price">$179</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="WD_BLACK SN850X" data-price="179" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Seagate FireCuda 530</h4>
+              <p>2TB NVMe SSD, PCIe 4.0, 7300 MB/s</p>
+              <p class="price">$199</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Seagate FireCuda 530" data-price="199" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Crucial T700</h4>
+              <p>2TB NVMe SSD, PCIe 5.0, 12400 MB/s</p>
+              <p class="price">$289</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Crucial T700" data-price="289" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>Samsung 870 QVO</h4>
+              <p>4TB SATA SSD, 560 MB/s</p>
+              <p class="price">$329</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="Samsung 870 QVO" data-price="329" class="qty-input">
+            </div>
+          </div>
+          <div class="component-item">
+            <div class="item-details">
+              <h4>WD Red Pro</h4>
+              <p>8TB 7200RPM HDD, 256MB Cache</p>
+              <p class="price">$249</p>
+            </div>
+            <div class="item-quantity">
+              <label>Quantity:</label>
+              <input type="number" min="0" max="10" value="0" data-name="WD Red Pro" data-price="249" class="qty-input">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h3>Order Summary</h3>
+      <table id="orderTable">
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody id="orderTableBody">
+          <!-- Items will be added here via JavaScript -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3">Total:</td>
+            <td id="totalPrice">$0</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="order-buttons">
+        <button id="addToFavorites">Save as Favorite</button>
+        <button id="applyFavorites">Apply Favorites</button>
+        <button id="buyNow">Buy Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="images/logo.png" alt="Grass Logo">
+        <span>GRASS</span>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="consolesmain.html">Consoles & Peripherals</a></li>
+          <li><a href="gamesmain.html">Games</a></li>
+          <li><a href="order.html" class="active">Order Parts</a></li>
+          <li><a href="faq.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@grassgaming.com</p>
+        <p>Phone: 074 036 5440</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 GRASS. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="order.js"></script>
+</body>
+
+</html>

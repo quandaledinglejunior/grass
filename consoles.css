@@ -181,6 +181,14 @@ header nav .menu a.active {
   transition: transform 0.3s ease;
 }
 
+.item-price{
+  display: none;
+}
+
+.grid-item:hover .item-price{
+  display: block;
+}
+
 .grid-item:hover {
   transform: scale(1.05);
 }
