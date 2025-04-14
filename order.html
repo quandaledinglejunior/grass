@@ -19,15 +19,6 @@
       const menu = document.getElementById('navMenu');
       menu.classList.toggle('show');
     }
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => {
-          console.log("Service Worker registered");
-        })
-        .catch((error) => {
-          console.error("Service Worker registration failed:", error);
-        });
-    }
   </script>
 
   <!-- Main Content -->
@@ -39,9 +30,9 @@
       </div>
 
       <div class="hamburger" onclick="toggleMenu()">
-        <span class="minus">-</span>
-        <span class="x">×</span>
-        <span class="plus">+</span>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
       <nav>
         <ul class="menu" id="navMenu">
@@ -415,6 +406,7 @@
 
     <div class="order-summary">
       <h3>Order Summary</h3>
+      <div class="table-container">
       <table id="orderTable">
         <thead>
           <tr>
@@ -434,6 +426,7 @@
           </tr>
         </tfoot>
       </table>
+      </div>
 
       <div class="order-buttons">
         <button id="addToFavorites">Save as Favorite</button>

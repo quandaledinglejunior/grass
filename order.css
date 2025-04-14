@@ -96,37 +96,21 @@ header nav .menu a.active {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-around;
-  height: 30px;
+  height: 20px;
   width: 30px;
-  background-color: rgba(140, 82, 255, 0.2);
-  border-radius: 5px;
-  padding: 5px;
 }
 
 .hamburger span {
   display: block;
   width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.hamburger .minus {
-  color: #ff5252;
-}
-
-.hamburger .x {
-  color: #ffbd4a;
-}
-
-.hamburger .plus {
-  color: #4caf50;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
 }
 
 /* Hero Section */
 .page-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('bg.webp') no-repeat center center;
+  background: linear-gradient(rgba(0, 1, 35, 0.8), rgba(0, 1, 35, 0.9)), url('bg.webp') no-repeat center center;
   background-size: cover;
   padding: 100px 50px;
   color: white;
@@ -188,12 +172,10 @@ header nav .menu a.active {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .component-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(140, 82, 255, 0.3);
+  background-color: #2b2b58;
 }
 
 .item-details h4 {
@@ -233,7 +215,6 @@ header nav .menu a.active {
   border-radius: 5px;
   background-color: #333;
   color: white;
-  font-family: 'TT Octosquares', Arial, sans-serif;
 }
 
 /* Order Summary */
@@ -242,6 +223,11 @@ header nav .menu a.active {
   border-radius: 10px;
   padding: 20px;
   margin-top: 30px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
 }
 
 .order-summary h3 {
@@ -292,10 +278,8 @@ header nav .menu a.active {
   padding: 12px 20px;
   border: none;
   border-radius: 5px;
-  font-family: 'TT Octosquares', Arial, sans-serif;
   font-size: 1rem;
   cursor: pointer;
-  transition: all 0.3s ease;
 }
 
 #addToFavorites, #applyFavorites {
@@ -323,9 +307,7 @@ header nav .menu a.active {
   color: white;
   padding: 30px 20px;
   text-align: center;
-  padding-top: 30px;
   font-size: 0.9rem;
-  color: #ffffff;
   margin-top: 50px;
   border-top: 1px solid #333;
 }
@@ -374,7 +356,6 @@ header nav .menu a.active {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover {
@@ -418,13 +399,12 @@ header nav .menu a.active {
   header nav .menu.show {
     position: absolute;
     display: flex;
-    background-color: #000123;
+    background-color: #2b2b48;
     padding: 20px;
     border-radius: 20px;
     left: 10px;
     top: 50px;
     width: 95%;
-    z-index: 1000;
   }
 
   header nav .menu li {

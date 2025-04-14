@@ -96,32 +96,16 @@ header nav .menu a.active {
   cursor: pointer;
   flex-direction: column;
   justify-content: space-around;
-  height: 30px;
+  height: 20px;
   width: 30px;
-  background-color: rgba(140, 82, 255, 0.2);
-  border-radius: 5px;
-  padding: 5px;
 }
 
 .hamburger span {
   display: block;
   width: 100%;
-  text-align: center;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.hamburger .minus {
-  color: #ff5252;
-}
-
-.hamburger .x {
-  color: #ffbd4a;
-}
-
-.hamburger .plus {
-  color: #4caf50;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
 }
 
 /* Checkout Section */
@@ -261,14 +245,6 @@ select {
   font-family: 'TT Octosquares', Arial, sans-serif;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-select:focus {
-  border-color: #8c52ff;
-  outline: none;
-}
-
 .error-message {
   color: #ff6b6b;
   font-size: 0.9rem;
@@ -288,7 +264,6 @@ select:focus {
   font-family: 'TT Octosquares', Arial, sans-serif;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 #payButton:hover {
@@ -299,13 +274,12 @@ select:focus {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  overflow: auto;
 }
 
 .modal-content {
@@ -350,14 +324,8 @@ select:focus {
   color: white;
   border: none;
   border-radius: 5px;
-  font-family: 'TT Octosquares', Arial, sans-serif;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#returnToStore:hover {
-  background-color: #7b46e3;
 }
 
 /* Footer Section */
@@ -366,9 +334,7 @@ select:focus {
   color: white;
   padding: 30px 20px;
   text-align: center;
-  padding-top: 30px;
   font-size: 0.9rem;
-  color: #ffffff;
   margin-top: 50px;
   border-top: 1px solid #333;
 }
@@ -417,7 +383,6 @@ select:focus {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-  transition: color 0.3s ease;
 }
 
 .footer-links ul li a:hover {
@@ -461,13 +426,12 @@ select:focus {
   header nav .menu.show {
     position: absolute;
     display: flex;
-    background-color: #000123;
+    background-color: #2b2b48;
     padding: 20px;
     border-radius: 20px;
     left: 10px;
     top: 50px;
     width: 95%;
-    z-index: 1000;
   }
 
   header nav .menu li {

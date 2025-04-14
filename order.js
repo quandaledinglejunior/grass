@@ -1,164 +1,90 @@
-// Order Page Script
-
 document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
+
+    // get all quantity inputs and buttons from the page
     const quantityInputs = document.querySelectorAll('.qty-input');
     const orderTableBody = document.getElementById('orderTableBody');
     const totalPriceElement = document.getElementById('totalPrice');
     const addToFavoritesBtn = document.getElementById('addToFavorites');
     const applyFavoritesBtn = document.getElementById('applyFavorites');
     const buyNowBtn = document.getElementById('buyNow');
-    
-    // Local object to store the current order
+
+    // this will store the current selected items
     let currentOrder = [];
-    
-    // Add event listeners to all quantity inputs
+
+    // when user changes quantity, update the table
     quantityInputs.forEach(input => {
-        input.addEventListener('change', updateOrderTable);
+        input.addEventListener('change', updateOrder);
     });
-    
-    // Event listeners for the buttons
-    addToFavoritesBtn.addEventListener('click', saveAsFavorite);
-    applyFavoritesBtn.addEventListener('click', applyFavorites);
-    buyNowBtn.addEventListener('click', proceedToCheckout);
-    
-    // Function to update the order table
-    function updateOrderTable() {
-        // Clear the current order array
-        currentOrder = [];
-        
-        // Clear the table body
-        orderTableBody.innerHTML = '';
-        
-        // Loop through all quantity inputs
-        quantityInputs.forEach(input => {
-            const quantity = parseInt(input.value);
-            
-            // If quantity is greater than 0, add to the order
-            if (quantity > 0) {
-                const name = input.getAttribute('data-name');
-                const price = parseFloat(input.getAttribute('data-price'));
-                const subtotal = price * quantity;
-                
-                // Add to current order array
-                currentOrder.push({
-                    name: name,
-                    price: price,
-                    quantity: quantity,
-                    subtotal: subtotal
-                });
-                
-                // Create table row
-                const row = document.createElement('tr');
-                row.innerHTML = `
-                    <td>${name}</td>
-                    <td>$${price}</td>
-                    <td>${quantity}</td>
-                    <td>$${subtotal}</td>
-                `;
-                
-                orderTableBody.appendChild(row);
-            }
-        });
-        
-        // Update total price
-        updateTotalPrice();
-    }
-    
-    // Function to update the total price
-    function updateTotalPrice() {
-        let total = 0;
-        
-        currentOrder.forEach(item => {
-            total += item.subtotal;
-        });
-        
-        totalPriceElement.textContent = `$${total}`;
-    }
-    
-    // Function to save the current order as a favorite
-    function saveAsFavorite() {
-        // Check if the order is empty
+
+    // when user clicks "add to favorites"
+    addToFavoritesBtn.addEventListener('click', () => {
         if (currentOrder.length === 0) {
-            alert('Your order is empty. Add some items first!');
+            alert('Add items before saving.');
             return;
         }
-        
-        // Save to local storage
+
+        // save the current order to browser memory
         localStorage.setItem('favoriteOrder', JSON.stringify(currentOrder));
-        alert('Your order has been saved as a favorite!');
-    }
-    
-    // Function to apply the favorite order
-    function applyFavorites() {
-        // Get the favorite order from local storage
-        const favoriteOrder = localStorage.getItem('favoriteOrder');
-        
-        // Check if there is a favorite order
-        if (!favoriteOrder) {
-            alert('No favorite order found!');
+    });
+
+    // when user clicks "apply favorites"
+    applyFavoritesBtn.addEventListener('click', () => {
+        // get the saved order from browser
+        const fav = JSON.parse(localStorage.getItem('favoriteOrder') || '[]');
+
+        // reset all input values first
+        quantityInputs.forEach(input => input.value = 0);
+
+        // fill inputs using saved data
+        fav.forEach(item => {
+            const input = document.querySelector(`.qty-input[data-name="${item.name}"]`);
+            if (input) input.value = item.quantity;
+        });
+
+        // update table with this data
+        updateOrder();
+    });
+
+    // when user clicks "buy now"
+    buyNowBtn.addEventListener('click', () => {
+        if (currentOrder.length === 0) {
+            alert('Add some items first.');
             return;
         }
-        
-        // Parse the favorite order
-        const parsedOrder = JSON.parse(favoriteOrder);
-        
-        // Clear all current selections
+
+        // save the current order to go to checkout
+        sessionStorage.setItem('currentOrder', JSON.stringify(currentOrder));
+        window.location.href = 'checkout.html'; // go to next page
+    });
+
+    // update the order table and total price
+    function updateOrder() {
+        currentOrder = []; // clear the list
+        orderTableBody.innerHTML = ''; // clear table
+        let total = 0;
+
+        // loop through all quantity inputs
         quantityInputs.forEach(input => {
-            input.value = 0;
-        });
-        
-        // Apply the favorite order to the inputs
-        parsedOrder.forEach(item => {
-            const input = document.querySelector(`.qty-input[data-name="${item.name}"]`);
-            if (input) {
-                input.value = item.quantity;
+            const qty = parseInt(input.value);
+            if (qty > 0) {
+                const name = input.dataset.name;
+                const price = parseFloat(input.dataset.price);
+                const subtotal = qty * price;
+
+                // add item to order
+                currentOrder.push({ name, quantity: qty, subtotal });
+
+                // show item in table
+                const row = document.createElement('tr');
+                row.innerHTML = `<td>${name}</td><td>$${price}</td><td>${qty}</td><td>$${subtotal}</td>`;
+                orderTableBody.appendChild(row);
+
+                // add to total price
+                total += subtotal;
             }
         });
-        
-        // Update the order table
-        updateOrderTable();
-        alert('Favorite order applied!');
-    }
-    
-    // Function to proceed to checkout
-    function proceedToCheckout() {
-        // Check if the order is empty
-        if (currentOrder.length === 0) {
-            alert('Your order is empty. Add some items first!');
-            return;
-        }
-        
-        // Save the current order to session storage for checkout page
-        sessionStorage.setItem('currentOrder', JSON.stringify(currentOrder));
-        
-        // Redirect to checkout page
-        window.location.href = 'checkout.html';
-    }
-    
-    // Check if there's an order in session storage (e.g., if user navigated back from checkout)
-    const savedOrder = sessionStorage.getItem('currentOrder');
-    if (savedOrder) {
-        try {
-            const parsedOrder = JSON.parse(savedOrder);
-            
-            // Clear all current selections
-            quantityInputs.forEach(input => {
-                input.value = 0;
-            });
-            
-            // Apply the saved order
-            parsedOrder.forEach(item => {
-                const input = document.querySelector(`.qty-input[data-name="${item.name}"]`);
-                if (input) {
-                    input.value = item.quantity;
-                }
-            });
-            
-            // Update the order table
-            updateOrderTable();
-        } catch (error) {
-            console.error('Error parsing saved order:', error);
-        }
+
+        // show total price on page
+        totalPriceElement.textContent = `$${total}`;
     }
 });
