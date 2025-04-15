@@ -1,0 +1,45 @@
+@startuml Order Page Activity Diagram
+skinparam backgroundColor #FFFFFF
+skinparam activityBackgroundColor #8c52ff
+skinparam activityBorderColor #000123
+skinparam activityFontColor #FFFFFF
+skinparam arrowColor #000123
+
+title GRASS Website - Order Page Activity Diagram
+
+start
+
+:User loads Order Page;
+
+fork
+  :View Component Categories;
+  :Select Component Quantity;
+  :Change Quantities as Needed;
+fork again
+  :View Order Summary Table;
+fork end
+
+:Update Order Summary;
+
+if (Order contains items?) then (yes)
+  fork
+    :Add to Favorites;
+    :Save Order to Local Storage;
+    :Notification: Order Saved;
+  fork again
+    :Apply Favorites;
+    :Load from Local Storage;
+    :Update Component Quantities;
+    :Update Order Summary;
+  fork again
+    :Buy Now;
+    :Save to Session Storage;
+    :Redirect to Checkout;
+  end fork
+else (no)
+  :Show Error: Add Items First;
+  :Return to Order Selection;
+endif
+
+stop
+@enduml

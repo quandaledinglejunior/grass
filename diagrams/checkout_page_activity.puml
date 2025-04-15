@@ -1,0 +1,49 @@
+@startuml Checkout Page Activity Diagram
+skinparam backgroundColor #FFFFFF
+skinparam activityBackgroundColor #8c52ff
+skinparam activityBorderColor #000123
+skinparam activityFontColor #FFFFFF
+skinparam arrowColor #000123
+
+title GRASS Website - Checkout Page Activity Diagram
+
+start
+
+:User loads Checkout Page;
+
+if (Current Order exists in Session Storage?) then (yes)
+  :Load Order from Session Storage;
+  :Display Order Summary Table;
+  :Display Total Price;
+  
+  fork
+    :Fill Personal Details;
+    :Enter Name;
+    :Enter Email;
+    :Enter Phone Number;
+  fork again
+    :Fill Delivery Details;
+    :Enter Address;
+    :Enter City;
+    :Enter Postal Code;
+  fork again
+    :Fill Payment Information;
+    :Enter Card Number;
+    note right: Auto-formatted with spaces every 4 digits
+    :Enter Expiry Date;
+    note right: Auto-formatted as MM/YY
+    :Enter CVV;
+  end fork
+  
+  :Submit Form;
+  
+  :Display Thank You Message;
+  :Clear Order from Session Storage;
+  
+else (no)
+  :Show Error: No Order Found;
+  :Redirect to Order Page;
+endif
+
+stop
+@enduml
