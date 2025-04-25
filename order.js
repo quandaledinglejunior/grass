@@ -1,69 +1,92 @@
-document.addEventListener('DOMContentLoaded', () => {
+// wait for the page to load before anything runs
+document.addEventListener('DOMContentLoaded', function () {
 
-    // grab inputs and buttons
-    const quantityInputs = document.querySelectorAll('.qty-input');
-    const orderTableBody = document.getElementById('orderTableBody');
-    const totalPrice = document.getElementById('totalPrice');
-    const addToFav = document.getElementById('addToFavorites');
-    const applyFav = document.getElementById('applyFavorites');
-    const buyNow = document.getElementById('buyNow');
+    // get all the stuff we need
+    const quantityInputs = document.querySelectorAll('.qty-input'); // the input boxes
+    const orderTableBody = document.getElementById('orderTableBody'); // where the order shows
+    const totalPrice = document.getElementById('totalPrice'); // where total price shows
+    const addToFav = document.getElementById('addToFavorites'); // save fav button
+    const applyFav = document.getElementById('applyFavorites'); // load fav button
+    const buyNow = document.getElementById('buyNow'); // buy button
 
-    let currentOrder = []; // store items picked
+    let currentOrder = []; // keeps track of what's selected
 
-    // update table on input change
-    quantityInputs.forEach(input => input.addEventListener('change', updateOrder));
+    // whenever a quantity changes, update the table
+    quantityInputs.forEach(function (input) {
+        input.addEventListener('change', updateOrder); // just refreshing things
+    });
 
-    // save current order to favorites (requirement: save order as favorite)
-    addToFav.addEventListener('click', () => {
-        if (!currentOrder.length) return alert('Nothing picked yet.');
+    // when save fav is clicked, store the current selection
+    addToFav.addEventListener('click', function () {
+        if (!currentOrder.length) {
+            alert('Nothing picked yet.');
+            return;
+        }
+
+        // just storing the selection in localStorage
         localStorage.setItem('favoriteOrder', JSON.stringify(currentOrder));
-        // Feedback to user that order was saved
         alert('Order saved to favorites!');
     });
 
-    // load favorite order (requirement: apply favorites to form)
-    applyFav.addEventListener('click', () => {
+    // when load fav is clicked, fill back the saved stuff
+    applyFav.addEventListener('click', function () {
         const fav = JSON.parse(localStorage.getItem('favoriteOrder') || '[]');
-        quantityInputs.forEach(input => input.value = 0); // reset all
-        fav.forEach(item => {
-            const input = document.querySelector(`.qty-input[data-name="${item.name}"]`);
-            if (input) input.value = item.quantity; // refill inputs
+
+        // clear everything first
+        quantityInputs.forEach(function (input) {
+            input.value = 0;
         });
-        updateOrder(); // refresh table
+
+        // fill back whatever was saved
+        fav.forEach(function (item) {
+            const input = document.querySelector('.qty-input[data-name="' + item.name + '"]');
+            if (input) {
+                input.value = item.quantity;
+            }
+        });
+
+        updateOrder(); // refresh the summary
     });
 
-    // save order and go to checkout page (requirement: navigate to new page)
-    buyNow.addEventListener('click', () => {
-        if (!currentOrder.length) return alert('No items selected.');
+    // when buy now is clicked
+    buyNow.addEventListener('click', function () {
+        if (!currentOrder.length) {
+            alert('No items selected.');
+            return;
+        }
+
+        // store the order for the next page and go there
         sessionStorage.setItem('currentOrder', JSON.stringify(currentOrder));
-        window.location.href = 'checkout.html';
+        window.location.href = 'checkout.html'; // yk, move on to checkout
     });
 
-    // refresh table and total price (requirement: show items and total price)
+    // this handles updating the table + total
     function updateOrder() {
-        currentOrder = []; // start fresh
-        orderTableBody.innerHTML = '';
+        currentOrder = []; // reset order
+        orderTableBody.innerHTML = ''; // clear out the table
         let total = 0;
 
-        quantityInputs.forEach(input => {
+        quantityInputs.forEach(function (input) {
             const qty = parseInt(input.value);
             if (qty > 0) {
                 const name = input.dataset.name;
                 const price = parseFloat(input.dataset.price);
                 const subtotal = qty * price;
 
-                // Store item data for checkout and favorites
-                currentOrder.push({ name, quantity: qty, subtotal });
+                // store the item
+                currentOrder.push({ name: name, quantity: qty, subtotal: subtotal });
 
-                // add row to order summary table
-                orderTableBody.innerHTML += `<tr><td>${name}</td><td>$${price}</td><td>${qty}</td><td>$${subtotal}</td></tr>`;
+                // show it in the table
+                orderTableBody.innerHTML +=
+                    '<tr><td>' + name + '</td><td>$' + price + '</td><td>' + qty + '</td><td>$' + subtotal + '</td></tr>';
 
-                total += subtotal; // sum up
+                total += subtotal;
             }
         });
 
-        totalPrice.textContent = `$${total}`; // show total
+        totalPrice.textContent = '$' + total; // show total
     }
 
-    updateOrder(); // first update when loaded
+    // run it once on page load just to be safe
+    updateOrder();
 });
