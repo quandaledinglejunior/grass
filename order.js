@@ -87,6 +87,17 @@ document.addEventListener('DOMContentLoaded', function () {
         totalPrice.textContent = '$' + total; // show total
     }
 
+    // Reset Table button logic (safe to include even if button is not present)
+    const resetTableBtn = document.getElementById('resetTableBtn');
+    if (resetTableBtn) {
+        resetTableBtn.addEventListener('click', function () {
+            quantityInputs.forEach(function (input) {
+                input.value = 0;
+            });
+            updateOrder();
+        });
+    }
+
     // run it once on page load just to be safe
     updateOrder();
 });

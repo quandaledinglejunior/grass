@@ -244,6 +244,17 @@ header nav .menu a.active {
   margin-bottom: 20px;
 }
 
+#resetTableBtn {
+  background: #1a1a3d;
+  color: #8c52ff;
+  border: 1px solid #8c52ff;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 #orderTable th,
 #orderTable td {
   border: 1px solid #444;
@@ -280,6 +291,11 @@ header nav .menu a.active {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
+}
+
+#resetTableBtn {
+  font-size: 0.8rem;
+  padding: 4px 10px;
 }
 
 #addToFavorites, #applyFavorites {
