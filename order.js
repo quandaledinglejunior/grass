@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         window.location.href = 'checkout.html'; // yk, move on to checkout
     });
 
-    // this handles updating the table + total
+    // Updates the summary table and total price
     function updateOrder() {
         currentOrder = []; // reset order
         orderTableBody.innerHTML = ''; // clear out the table
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
         totalPrice.textContent = '$' + total; // show total
     }
 
-    // Reset Table button logic (safe to include even if button is not present)
+    // Reset Table button (added for assignment, clears all quantities)
     const resetTableBtn = document.getElementById('resetTableBtn');
     if (resetTableBtn) {
         resetTableBtn.addEventListener('click', function () {

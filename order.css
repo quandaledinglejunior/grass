@@ -244,6 +244,7 @@ header nav .menu a.active {
   margin-bottom: 20px;
 }
 
+/* Reset Table button - added for assignment */
 #resetTableBtn {
   background: #1a1a3d;
   color: #8c52ff;
@@ -293,6 +294,7 @@ header nav .menu a.active {
   cursor: pointer;
 }
 
+/* Reset Table button - added for assignment */
 #resetTableBtn {
   font-size: 0.8rem;
   padding: 4px 10px;
