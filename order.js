@@ -13,7 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // whenever a quantity changes, update the table
     quantityInputs.forEach(function (input) {
-        input.addEventListener('change', updateOrder); // just refreshing things
+        input.addEventListener('change', function () {
+            const qty = parseInt(input.value);
+            if (qty <= 0) {
+                alert('Quantity must be greater than 0');
+                input.value = 1;
+            }
+            updateOrder();
+        });
     });
 
     // when save fav is clicked, store the current selection
